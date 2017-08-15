@@ -26,6 +26,7 @@ public class DownloadController {
     public @ResponseBody void downloadA(HttpServletResponse response) throws IOException {
         File file = getFile();
         InputStream in = new FileInputStream(file);
+        System.err.println("testing");
         //String encodedBase64 = null;
        byte[] base64EncodedData  =  Base64.encodeBase64(FileCopyUtils.copyToByteArray(file));
         
